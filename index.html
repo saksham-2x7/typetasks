@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasklane — typed tasks, three lanes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Task<span>lane</span></h1>
+      <p class="sub">Move work from <b>todo</b> to <b>done</b>. Built with TypeScript.</p>
+    </header>
+
+    <form id="add-form" class="add">
+      <input id="title" type="text" placeholder="What needs doing?" autocomplete="off" aria-label="Task title" />
+      <button id="add-btn" type="submit">Add</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="chip active" data-filter="all">All <em id="count-all">0</em></button>
+      <button class="chip" data-filter="todo">Todo <em id="count-todo">0</em></button>
+      <button class="chip" data-filter="in-progress">In progress <em id="count-in-progress">0</em></button>
+      <button class="chip" data-filter="done">Done <em id="count-done">0</em></button>
+    </nav>
+
+    <ul id="task-list" class="list"></ul>
+    <p id="empty" class="empty" hidden>Nothing here yet.</p>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

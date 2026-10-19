@@ -8,5 +8,5 @@
     "noImplicitAny": true,
     "skipLibCheck": true
   },
-  "include": ["model.ts"]
+  "include": ["model.ts", "app.ts"]
 }
